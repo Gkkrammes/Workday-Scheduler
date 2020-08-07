@@ -4,17 +4,139 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal:ital@1&family=Bad+Script&family=Marcellus&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css"/>
-
-    <title>Work Day Scheduler</title>
+    <title>Workday Scheduler</title>
   </head>
 
-<body>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>  
-    <script src="script.js"></script>
+<!--Jumbotron header with title, descriptions, and date/time -->
+  <header class="jumbotron">
+    <h1 class="display-4">Workday Scheduler</h1>
+    <p class="display">A daily calendar app to schedule your day.</p>
+    <hr class="my-4">
+    <p>Schedule your daily meetings, todo's, etc and save them to the calendar.</p>
+    <p id="currentDay" class="lead"></p>
+  </header>
+
+<!-- Rows with time, textarea, save button-->
+    <section class="row">
+     <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">9AM</span>
+        </div>
+        <textarea id="9Row" class="form-control" aria-label="With textarea"></textarea>
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" id="button-addon2" data-hour=9><i class="far fa-save fa-2x"></i></button>
+        </div>
+        </div>
+    </section>
+    
+    <section class="row">
+    <div class="input-group">
+        <div class="input-group-prepend">
+          <span id="10row" class="input-group-text">10AM</span>
+        </div>
+        <textarea id="10Row" class="form-control" aria-label="With textarea"></textarea>
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2" data-hour=10><i class="far fa-save fa-2x"></i></button>
+        </div>
+        </div>
+    </section>
+
+    <section class="row">
+    <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">11AM</span>
+        </div>
+        <textarea id="11Row" class="form-control" aria-label="With textarea"></textarea>
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2" data-hour=11><i class="far fa-save fa-2x"></i></button>
+        </div>
+        </div>
+    </section>
+    
+    <section class="row">
+    <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">12PM</span>
+        </div>
+        <textarea id="12Row" class="form-control" aria-label="With textarea"></textarea>
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2" data-hour=12><i class="far fa-save fa-2x"></i></button>
+        </div>
+        </div>
+    </section>
+
+    <section class="row">
+    <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">1PM</span>
+        </div>
+        <textarea id="1Row" class="form-control" aria-label="With textarea"></textarea>
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2" data-hour=1><i class="far fa-save fa-2x"></i></button>
+        </div>
+        </div>
+    </section>
+
+    <section class="row">
+    <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">2PM</span>
+        </div>
+        <textarea id="2Row" class="form-control" aria-label="With textarea"></textarea>
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2" data-hour=2><i class="far fa-save fa-2x"></i></button>
+        </div>
+        </div>
+    </section>
+     
+    <section class="row">
+    <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">3PM</span>
+        </div>
+        <textarea id="3Row" class="form-control" aria-label="With textarea"></textarea>
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2" data-hour=3><i class="far fa-save fa-2x"></i></button>
+        </div>
+        </div>
+    </section>
+
+    <section class="row">
+    <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">4PM</span>
+        </div>
+        <textarea id="4Row" class="form-control" aria-label="With textarea"></textarea>
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2" data-hour="4"><i class="far fa-save fa-2x"></i></button>
+        </div>
+        </div>
+    </section>
+
+    <section class="row">
+    <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">5PM</span>
+        </div>
+        <textarea id="5Row" class="form-control" aria-label="With textarea"></textarea>
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2" data-hour=5><i class="far fa-save fa-2x"></i></button>
+        </div>
+        </div>
+        </section>
+
+  </div>
+<!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="script.js"></script>
 
 </body>
 </html>
